@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcxylcxttvkbi"]
+
+[ext_resource type="Texture2D" uid="uid://mk83g8iuo556" path="res://icon.svg" id="1_q7n3b"]
+[ext_resource type="PackedScene" uid="uid://xannpmt2xrfd" path="res://nodes/room.tscn" id="2_oesem"]
+
+[node name="cycle" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1.52588e-05, -1.52588e-05)
+scale = Vector2(4, 4)
+texture = ExtResource("1_q7n3b")
+
+[node name="room" parent="." instance=ExtResource("2_oesem")]
+position = Vector2(0, 256)
+
+[node name="room2" parent="." instance=ExtResource("2_oesem")]
+position = Vector2(256, 0)
+
+[node name="room3" parent="." instance=ExtResource("2_oesem")]
+position = Vector2(-256, 0)
+
+[node name="room4" parent="." instance=ExtResource("2_oesem")]
+position = Vector2(0, -256)
